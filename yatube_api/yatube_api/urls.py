@@ -5,12 +5,11 @@ from django.urls import include, path
 from rest_framework.authtoken import views
 
 
-urlpatterns = [ 
-    path('api/v1/admin/', admin.site.urls), 
-    path('', include('api.urls',  namespace='api')), 
-    path('api/v1/api-token-auth/', views.obtain_auth_token), 
-
-] 
+urlpatterns = [
+    path('api/v1/admin/', admin.site.urls),
+    path('', include('api.urls',  namespace='api')),
+    path('api/v1/api-token-auth/', views.obtain_auth_token),
+]
 
 
 if settings.DEBUG:
